@@ -6,18 +6,18 @@
 using namespace std;
 int main()
 {
-    int num;
+    long long num;
     cin >> num;
-
+    int val;
     for (int i = 0; i < num; i++)
     {
-        cout << 1 << " ";
-        for (int j = 1; j < i; j++)
+        val = 1;
+
+        for (int j = 0; j <= i; j++)
         {
-            cout << i << " ";
+            cout << val << " ";
+            val = val * (i - j) / (j + 1);
         }
-        if (i != 0)
-            cout << 1;
 
         cout << endl;
     }
