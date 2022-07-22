@@ -12,7 +12,6 @@ void pyramid1(int num, int spaces)
     {
         return;
     }
-    pyramid1(num - 1, spaces + 1);
     int stars = num + (num - 1);
     // spaces
     for (int i = 1; i <= spaces; i++)
@@ -25,6 +24,7 @@ void pyramid1(int num, int spaces)
         cout << "*";
     }
     cout << endl;
+    pyramid1(num - 1, spaces + 1);
 }
 // solution2
 int spaces_;
@@ -33,8 +33,7 @@ void pyramid2(int num)
     if (num == 0)
     {
         return;
-    }
-    pyramid2(num - 1);
+    } 
     // spaces
     for (int i = 1; i <= spaces_ - num; i++)
     {
@@ -46,6 +45,7 @@ void pyramid2(int num)
         cout << "*";
     }
     cout << endl;
+    pyramid2(num - 1);
 }
 int main()
 {
