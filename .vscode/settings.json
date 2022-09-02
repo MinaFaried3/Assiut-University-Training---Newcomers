@@ -1,5 +1,7 @@
 {
     "files.associations": {
+        "*.html": "html",
+        "*.HTML": "html",
         "iostream": "cpp",
         "utility": "cpp",
         "cstdlib": "cpp",
@@ -44,6 +46,13 @@
         "xmemory": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp",
+        "vector": "cpp"
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
     }
 }
