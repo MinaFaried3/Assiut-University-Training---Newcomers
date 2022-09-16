@@ -10,6 +10,9 @@ using namespace std;
 #define lol long long int
 long long findBiggestDivDen(lol den1, lol den2)
 {
+    // 6 4
+    // 4 2
+    // 2 0
     if (den2 != 0)
     {
         return findBiggestDivDen(den2, den1 % den2);
