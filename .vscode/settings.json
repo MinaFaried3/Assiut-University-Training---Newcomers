@@ -49,7 +49,12 @@
         "iomanip": "cpp",
         "xlocmon": "cpp",
         "xloctime": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "queue": "cpp",
+        "deque": "cpp",
+        "xtree": "cpp",
+        "map": "cpp",
+        "stack": "cpp"
     },
     "editor.tokenColorCustomizations": {
         "comments": "",
