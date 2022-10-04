@@ -14,5 +14,18 @@ using namespace std;
 #define endl '\n'
 int main()
 {
-    
+    string colors = "ROYGBIV";
+    string addition = "GBIV";
+    int num;
+    cin >> num;
+
+    int size = num - 7;
+    cout << colors;
+    int times = size / 4;
+    for (int i = 0; i < times; i++)
+        cout << addition;
+
+    int endIndex = size % 4;
+    for (int i = 0; i < endIndex; i++)
+        cout << addition[i];
 }
