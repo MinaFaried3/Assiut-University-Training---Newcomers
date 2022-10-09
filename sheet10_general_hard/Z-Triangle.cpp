@@ -14,8 +14,12 @@ using namespace std;
 #define endl '\n'
 void fast()
 {
-    cin.tie(0);
+    ios_base::sync_with_stdio(0);
+    ios::sync_with_stdio(0);
+    cin.sync_with_stdio(0);
     cout.sync_with_stdio(0);
+    cin.tie(NULL);
+    cout.tie(NULL);
 }
 bool testTriangle(int x1, int y1, int x2, int y2, int x3, int y3)
 {
