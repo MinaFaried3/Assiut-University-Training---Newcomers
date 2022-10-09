@@ -3,7 +3,7 @@
 #include <string>
 #include <cmath>
 using namespace std;
-void sol1()
+void solution1()
 {
     string str, temp;
     getline(cin, str);
@@ -38,7 +38,7 @@ void sol1()
     }
 }
 
-void sol2()
+void solution2()
 {
     string str;
     bool space = false;
@@ -55,5 +55,5 @@ void sol2()
 }
 int main()
 {
-    sol2();
+    solution2();
 }
