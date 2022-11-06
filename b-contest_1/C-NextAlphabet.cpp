@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int main()
+void solution1()
 {
     char letter;
     cin >> letter;
@@ -8,9 +8,26 @@ int main()
     if (askChar == 122)
     {
         cout << 'a' << endl;
-        return 0;
+        return;
     }
     ++letter;
-    
+
     cout << letter << endl;
+}
+
+void solution2()
+{
+    char letter;
+    cin >> letter;
+
+    letter++;
+    letter %= 123;
+    if (letter < 97)
+        letter += 97;
+
+    cout << letter << endl;
+}
+int main()
+{
+    solution2();
 }
