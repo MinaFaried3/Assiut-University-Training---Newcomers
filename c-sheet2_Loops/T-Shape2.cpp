@@ -1,11 +1,10 @@
 #include <iostream>
 using namespace std;
 int main()
-{
-    int lines;
+{int lines;
     cin >> lines;
     int space = lines - 1;
-    int asterisk = 1, q = 0;
+    int asterisk = 1, currentAsterisk = 0;
 
     for (int i = 1; i <= lines; i++)
     {
@@ -17,22 +16,13 @@ int main()
 
         // we can use i*2 in for loop
 
-        asterisk = i + q;
-        q++;
-
-        while (asterisk != 0)
+        for (int x = 1; x <= asterisk; x++)
         {
             cout << "*";
-            asterisk--;
         }
-        //        this loop used to create space after "*" but in the question didn't need it
 
-        // for (int f = 1; f <= space; f++)
-        // {
-        //     cout << " ";
-        // }
         cout << endl;
-
+        asterisk += 2;
         space--;
     }
 }
