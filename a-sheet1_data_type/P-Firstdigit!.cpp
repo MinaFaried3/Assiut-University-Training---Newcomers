@@ -30,7 +30,21 @@ void solution2()
         cout << "ODD" << endl;
     }
 }
+
+void solution3()
+{
+    char num;
+    cin >> num;
+    if (num % 2 == 0)
+    {
+        cout << "EVEN" << endl;
+    }
+    else
+    {
+        cout << "ODD" << endl;
+    }
+}
 int main()
 {
-    solution2();
+    solution3();
 }

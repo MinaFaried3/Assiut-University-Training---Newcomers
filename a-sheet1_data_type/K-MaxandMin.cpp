@@ -49,10 +49,34 @@ void solution2()
 
     min_ = min(num1, min(num2, num3));
     max_ = max(num1, max(num2, num3));
-    
+
     cout << min_ << " " << max_ << endl;
+}
+
+void solution3()
+{
+
+    int a, b, c;
+    cin >> a >> b >> c;
+    // find min first
+    if (a <= b && a <= c)
+        cout << a;
+    else if (b <= a && b <= c)
+        cout << b;
+    else if (c <= a && c <= b)
+        cout << c;
+
+    cout << " ";
+
+    // find max latter
+    if (a >= b && a >= c)
+        cout << a;
+    else if (b >= a && b >= c)
+        cout << b;
+    else if (c >= a && c >= b)
+        cout << c;
 }
 int main()
 {
-    solution2();
+    solution3();
 }
