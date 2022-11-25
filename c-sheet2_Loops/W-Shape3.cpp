@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int main()
+void solution1()
 {
     int lines;
     cin >> lines;
@@ -42,4 +42,38 @@ int main()
         space++;
         cout << endl;
     }
+    
+}
+void solution2()
+{
+    int lines;
+    cin >> lines;
+    int asterisk = 1;
+    int space = lines - 1;
+    for (size_t i = 1; i <= lines * 2; i++)
+    {
+        for (size_t x = 0; x < space; x++)
+        {
+            cout << ' ';
+        }
+        for (size_t x = 0; x < asterisk; x++)
+        {
+            cout << '*';
+        }
+        cout << endl;
+        if (i < lines)
+        {
+            asterisk += 2;
+            space--;
+        }
+        else if (i > lines)
+        {
+            asterisk -= 2;
+            space++;
+        }
+    }
+}
+int main()
+{
+    solution2();
 }
