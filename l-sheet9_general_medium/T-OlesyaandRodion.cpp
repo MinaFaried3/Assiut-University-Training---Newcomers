@@ -67,6 +67,30 @@ void solution2()
         }
     }
 }
+void solution3()
+{
+    int digits, divisible;
+    cin >> digits >> divisible;
+
+    if (divisible == 10)
+    {
+
+        if (digits == 1)
+        {
+            cout << -1;
+        }
+        else
+        {
+            cout << 1;
+            for (int i = 1; i < digits; i++)
+                cout << 0;
+        }
+        return;
+    }
+
+    for (int i = 1; i <= digits; i++)
+        cout << divisible;
+}
 int main()
 {
     solution2();

@@ -42,9 +42,46 @@ void solution1()
         space++;
         cout << endl;
     }
-    
 }
+
 void solution2()
+{
+    int lines;
+    cin >> lines;
+
+    for (int i = 1; i <= lines; i++)
+    {
+
+        for (int w = lines - i; w >= 1; w--)
+        {
+            cout << " ";
+        }
+        // use i*2 in for loop
+        for (int x = 1; x <= (i * 2) - 1; x++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+
+    for (int i = lines; i >= 1; i--)
+    {
+
+        for (int w = lines - i; w >= 1; w--)
+        {
+            cout << " ";
+        }
+        // use i*2 in for loop
+        for (int x = 1; x <= (i * 2) - 1; x++)
+        {
+            cout << "*";
+        }
+
+        cout << endl;
+    }
+}
+void solution3()
 {
     int lines;
     cin >> lines;
@@ -73,6 +110,7 @@ void solution2()
         }
     }
 }
+
 int main()
 {
     solution2();
