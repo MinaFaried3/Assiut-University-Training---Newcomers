@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int main()
+void solution1()
 {
     int cases;
     cin >> cases;
@@ -35,4 +35,37 @@ int main()
 
         cout << min << endl;
     }
+}
+
+void solution2()
+{
+    int cases;
+    cin >> cases;
+    while (cases--)
+    {
+        int size;
+        cin >> size;
+        int *arr = new int[size];
+
+        for (int i = 0; i < size; i++)
+            cin >> arr[i];
+        int minRes;
+        for (int i = 0; i < size; i++)
+            for (int j = i + 1; j < size; j++)
+            {
+                int result = arr[i] + arr[j] + (j + 1) - (i + 1);
+
+                if (i == 0 && j == 1)
+                {
+                    minRes = result;
+                    continue;
+                }
+
+                minRes = min(minRes, result);
+            }
+        cout << minRes << endl;
+    }
+}
+int main()
+{
 }

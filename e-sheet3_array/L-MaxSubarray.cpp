@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-int main()
+
+void solution1()
 {
     int cases;
     cin >> cases;
@@ -49,48 +50,39 @@ int main()
     }
 }
 
-// ------------------------------------------------
+void solution2()
+{
+    int cases;
+    cin >> cases;
+    while (cases--)
+    {
+        int size;
+        cin >> size;
+        int *arr = new int[size];
+        for (int i = 0; i < size; i++)
+            cin >> arr[i];
 
-// int main()
-// {
-//     int cases;
-//     cin >> cases;
-//     while (cases--)
-//     {
-//         int size;
-//         cin >> size;
-//         int *arr = new int[size];
-//         for (int i = 0; i < size; i++)
-//         {
-//             cin >> arr[i];
-//         }
-//         int max;
-//         // columns
-//         for (int i = 0; i < size; i++)
-//         {
-//             // rows
-//             for (int j = 0; j < (size - i); j++)
-//             {
-//                   cout << " [ ";
+        for (int i = 0; i < size; i++)
+        {
+            int maxRes;
+            for (int x = i; x < size; x++)
+            {
+                if (i == x)
+                {
+                    maxRes = arr[x];
+                    cout << maxRes << " ";
+                    continue;
+                }
 
-//                 // sub array
-//                 for (int x = 0; x < i + 1; x++)
-//                 {
-//                     if (x == 0)
-//                     {
-//                         max = arr[j + x];
-//                     }
-//                    cout << arr[j + x] << " ";
-//                     if (max < arr[j + x])
-//                     {
-//                         max = arr[j + x];
-//                     }
-//                 }
-//                cout << " ] ";
-//                 cout << max << " ";
-//                 int max;
-//             }
-//             cout << endl;
-//         }
-//     }
-// }
+                maxRes = max(maxRes, arr[x]);
+                cout << maxRes << " ";
+            }
+        }
+
+        cout << endl;
+    }
+}
+
+int main()
+{
+}

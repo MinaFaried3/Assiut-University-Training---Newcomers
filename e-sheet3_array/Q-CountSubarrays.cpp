@@ -89,6 +89,35 @@ void second_sol()
     }
     cout << count << endl;
 }
+
+void third_sol()
+{
+    int size;
+    cin >> size;
+    int *arr = new int[size];
+    for (int i = 0; i < size; i++)
+        cin >> arr[i];
+    int counter = 0;
+    for (int i = 0; i < size; i++)
+    {
+
+        for (int x = i; x < size; x++)
+        {
+            if (i == x)
+            {
+                counter++;
+                continue;
+            }
+
+            if (arr[x] > arr[x - 1])
+                counter++;
+            else
+                break;
+        }
+    }
+
+    cout << counter << endl;
+}
 int main()
 {
 
@@ -96,6 +125,6 @@ int main()
     cin >> cases;
     while (cases--)
     {
-        second_sol();
+        third_sol();
     }
 }
